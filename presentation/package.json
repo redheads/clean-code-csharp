@@ -1,0 +1,22 @@
+{
+  "name": "2019-07-csharp-clean-code",
+  "version": "1.0.0",
+  "description": "Slides for CSharp Clean Code session",
+  "main": "reveal.html",
+  "scripts": {
+    "start": "reveal-md slides/index.md -w --template reveal.html --highlight-theme foundation",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pdf": "decktape --chrome-arg=--no-sandbox -s 1920x1080 -p 50 --load-pause 50 reveal http://localhost:1948/index.md#/ pdf/clean-code.pdf"
+  },
+  "keywords": [
+    "clean code",
+    "c#",
+    "slides"
+  ],
+  "author": "Patrick Drechsler",
+  "license": "MIT",
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "reveal-md": "^3.0.4"
+  }
+}

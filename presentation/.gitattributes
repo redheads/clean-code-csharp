@@ -1,0 +1,7 @@
+*.cs	  -text diff=charp 
+*.csproj  -text 
+*.sln     -text 
+*.cmd     -text 
+*.msbuild -text 
+*.md      -text eol-crlf
+
