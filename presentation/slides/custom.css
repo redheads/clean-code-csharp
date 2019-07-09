@@ -7,11 +7,16 @@
 }
 
 .reveal h2 {
-  font-size: 2.0em;
+  font-size: 1.5em;
 }
 
 .reveal h3 {
   font-size: 1.3em;
+}
+
+/* Tweak font-size of in bullet points */
+.reveal section li {
+  font-size: 0.9em !important;
 }
 
 .reveal blockquote {
