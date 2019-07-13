@@ -26,4 +26,8 @@ FILE: 03-practices.md
 
 ---
 
+FILE: 04-solid.md
+
+---
+
 FILE: 99-literature.md
