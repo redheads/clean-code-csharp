@@ -2,16 +2,26 @@ namespace SolidDemos._5_DIP.Good
 {
     public class WeatherTracker
     {
-        private readonly INotifier _notifier;
+        private readonly INotifier[] _notifiers;
         
-        public WeatherTracker(INotifier notifier)
+        public WeatherTracker(params INotifier[] notifiers)
         {
-            _notifier = notifier;
+            _notifiers = notifiers;
         }
 
-        public void SetWeatherCondition(string weatherCondition)
+        public string SetWeatherCondition(string weatherCondition)
         {
-            _notifier.Alert(weatherCondition);
+            foreach (var notifier in _notifiers)
+            {
+                var result = notifier.Alert(weatherCondition);
+                
+                if (!string.IsNullOrWhiteSpace(result))
+                {
+                    return result;
+                }
+            }
+
+            return string.Empty;
         }
     }
 }

@@ -1,15 +1,15 @@
-using System;
-
 namespace SolidDemos._5_DIP.Good.Clients
 {
     public class MobileDevice : INotifier
     {
-        public void Alert(string weatherCondition)
+        public string Alert(string weatherCondition)
         {
             if (weatherCondition == "rainy")
             {
-                Console.WriteLine("It is raining!");
+                return "It is raining!";
             }
+
+            return string.Empty;
         }
     }
 }

@@ -1,15 +1,15 @@
-using System;
-
 namespace SolidDemos._5_DIP.Good.Clients
 {
     public class EmailClient : INotifier
     {
-        public void Alert(string weatherCondition)
+        public string Alert(string weatherCondition)
         {
             if (weatherCondition == "sunny")
             {
-                Console.WriteLine("It is sunny!");
+                return "It is sunny!";
             }
+
+            return string.Empty;
         }
     }
 }

@@ -19,10 +19,6 @@
       <Folder Include="1_SRP\Good" />
       <Folder Include="2_OCP\Bad" />
       <Folder Include="2_OCP\Good" />
-      <Folder Include="3_LSP\Bad" />
-      <Folder Include="3_LSP\Good" />
-      <Folder Include="4_ISP\Bad" />
-      <Folder Include="4_ISP\Good" />
     </ItemGroup>
 
 </Project>
