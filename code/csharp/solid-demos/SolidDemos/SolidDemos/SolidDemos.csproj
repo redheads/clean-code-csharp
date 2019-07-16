@@ -17,8 +17,6 @@
     <ItemGroup>
       <Folder Include="1_SRP\Bad" />
       <Folder Include="1_SRP\Good" />
-      <Folder Include="2_OCP\Bad" />
-      <Folder Include="2_OCP\Good" />
     </ItemGroup>
 
 </Project>
