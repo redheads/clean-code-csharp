@@ -14,9 +14,4 @@
         <PackageReference Include="xunit.runner.visualstudio" Version="2.4.0" />
     </ItemGroup>
 
-    <ItemGroup>
-      <Folder Include="1_SRP\Bad" />
-      <Folder Include="1_SRP\Good" />
-    </ItemGroup>
-
 </Project>

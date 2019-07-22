@@ -45,9 +45,3 @@ Robert C. Martin
 > Depend upon abstractions, not concretions.
 
 Robert C. Martin
-
-----
-
-```csharp
-
-```
