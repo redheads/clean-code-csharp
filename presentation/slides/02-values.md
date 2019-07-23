@@ -34,12 +34,40 @@
 - Interface Segregation Principle (**ISP**)
 - Open Closed Principle (OCP)
 
+----
+
+#### Law of Demeter
+
+```csharp
+class Street { string Name { get; set; } }
+
+class Address { Street Street { get; set; } }
+
+class Person {
+    int Id { get; set; }
+    Address Address { get; set; }
+}
+
+class PersonService {
+
+    void DoSomething() {
+        var person = repo.GetById(id)
+        var street = person.Address.Street; // <- train wreck
+    }
+
+    void DoSomethingBetter() {
+        var person = repo.GetById(id)
+        var street = person.GetStreet();
+    }
+}
+```
+
 ---
 
 ### Honor Pledges
 
 - Überraschungen vermeiden
-- **Principle of Least Astonishment**
+- AKA: **Principle of Least Astonishment**
 - Implementation mirrors design
-- Favour Composition over Inheritance (**FCoI**)
+- **Favour Composition over Inheritance (FCoI)**
 - Liskov Substitution Principle (LSP)

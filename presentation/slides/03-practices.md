@@ -65,5 +65,4 @@ Leave the campground cleaner than you found it!
 - Selbstreflexion
 - Grundursachen bekämpfen, nicht die Symptome
 - Ergebnisse messen
-- Issue Tracking einsetzen
 - Regelmäßige Retrospektiven im Team

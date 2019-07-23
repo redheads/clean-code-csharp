@@ -19,7 +19,7 @@
 
 ![productivity-over-time](images/productivity-over-time.png)
 
-Quelle: Clean Code - A Handbook of Agile Software Craftsmanship (R.C. Martin)
+<cite>Quelle: Clean Code - A Handbook of Agile Software Craftsmanship (R.C. Martin)</cite>
 
 ---
 
@@ -32,14 +32,15 @@ Quelle: Clean Code - A Handbook of Agile Software Craftsmanship (R.C. Martin)
 - Das Chaos wächst, wenn man nicht mit Umsicht handelt! <!-- .element: class="fragment" data-fragment-index="3" -->
 
 ---
+<!-- .slide: data-background="images/broken-window.jpg" data-background-size="cover"  data-state="dimmed" -->
 
 ## Broken window theory
 
-> A building with broken windows looks like nobody cares about it. So other people stop caring. They allow more windows to become broken. Eventually they actively break them.
+> A building with broken windows looks like nobody cares about it. So other people stop caring. They allow more windows to become broken. Eventually they actively break them.<!-- .element: class="fragment" data-fragment-index="1" -->
 
-Dave Thomas and Andy Hunt
+<cite>Dave Thomas and Andy Hunt</cite><!-- .element: class="fragment" data-fragment-index="1" -->
 
-(Ursprünglich von den Sozialforscher James Q. Wilson and George L. Kelling, März 1982)
+<cite>(Ursprünglich von den Sozialforscher James Q. Wilson and George L. Kelling, März 1982)</cite><!-- .element: class="fragment" data-fragment-index="1" -->
 
 ---
 
@@ -49,25 +50,25 @@ Dave Thomas and Andy Hunt
 
 > Clean code reads like well-written prose. Clean code never obscures the designer's intent but rather is full of crisp abstractions and straightforward lines of control.
 
-Grady Booch
+<cite>Grady Booch</cite>
 
 ----
 
 > Clean code can be read, and enhanced by a developer other than its original author.
 
-Dave Thomas
+<cite>Dave Thomas</cite>
 
 ----
 
 > Clean code always looks like it was written by someone who cares.
 
-Michael Feathers
+<cite>Michael Feathers</cite>
 
 ----
 
 > Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live.
 
-Martin Golding
+<cite>Martin Golding</cite>
 
 ---
 

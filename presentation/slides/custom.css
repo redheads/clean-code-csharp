@@ -125,3 +125,12 @@
 .reveal blockquote p {
   margin-left: 5%;
 }
+
+.reveal cite {
+  font-size: smaller;
+}
+
+.reveal .background-info {
+  color: gray;
+  font-size: smaller;
+}
