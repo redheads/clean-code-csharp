@@ -151,10 +151,7 @@ class Person : IPerson {
 
 Einzige Anforderung: Detailansicht der Person.
 
-<<<<<<< HEAD
 Robert C. Martin
-=======
-TODO
 
 Also:
 
@@ -208,5 +205,5 @@ IPersonDetailViewModel ConvertToDetailViewModel(Person person)
  ----
 
  ```csharp
-
+// TODO
  ```
