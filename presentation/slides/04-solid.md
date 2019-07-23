@@ -210,4 +210,3 @@ IPersonDetailViewModel ConvertToDetailViewModel(Person person)
  ```csharp
 
  ```
->>>>>>> mmh. up
