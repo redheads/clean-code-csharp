@@ -254,7 +254,9 @@ IPersonDetailViewModel ConvertToDetailViewModel(Person person)
 
 ### Dependency Inversion Principle
 
-> Depend upon abstractions, not concretions.
+> High-level modules should not depend on low-level modules. Both should depend on abstractions.
+> 
+> Abstractions should not depend upon details. Details should depend upon abstractions.
 
 <cite>Robert C. Martin</cite>
 
