@@ -51,6 +51,38 @@ class SomeServiceBetter {
 }
 ```
 
+----
+
+```csharp
+class Rectangle {
+    // ...
+    int width;
+    int height;
+
+    void Draw() {
+        // draw to output device
+    }
+
+    int CalculateArea() => width * height;
+}
+```
+
+```csharp
+class GeometricRectangle {
+    // ...
+    int width;
+    int height;
+
+    int CalculateArea() => width * height;
+}
+
+class Rectangle {
+    void Draw() {
+        // draw to output device
+    }
+}
+```
+
 ---
 
 ### Open/Close Principle
