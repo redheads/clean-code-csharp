@@ -97,7 +97,20 @@ class Rectangle {
 
 #### Live coding
 
-Wenn was unklar ist: Fragen!
+...zuerst eine kurze **Werbepause**...
+
+----
+
+#### Werbeblock ;-)
+
+- Dojos, Katas
+- Softwerkskammer, Meetups
+- Online Plattformen (exercism.io, pluralsight, ...)
+- Was ist FizzBuzz?
+
+**Now some code...**
+
+Wenn was unklar ist: Fragen
 
 ---
 

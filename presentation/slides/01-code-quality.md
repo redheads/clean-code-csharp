@@ -1,5 +1,7 @@
 ## Warum ist Code Qualität wichtig?
 
+O-Töne von Nicht-Entwicklern:
+
 - "Programmieren ist hauptsächlich Implementierung von neuen Features" <!-- .element: class="fragment" data-fragment-index="0" -->
 - "Der Code kompiliert, macht was er soll, somit ist alles in Ordnung" <!-- .element: class="fragment" data-fragment-index="1" -->
 - "Fachbereiche bezahlen für Features, nicht für "schönen" Code" <!-- .element: class="fragment" data-fragment-index="2" -->

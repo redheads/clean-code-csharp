@@ -38,4 +38,8 @@ FILE: 05-code-smells.md
 
 ---
 
+FILE: 98-summary.md
+
+---
+
 FILE: 99-literature.md
