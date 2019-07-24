@@ -33,7 +33,8 @@
 
 .reveal section[data-background] h1, 
 .reveal section[data-background] h2, 
-.reveal  section[data-background] h3 {
+.reveal  section[data-background] h3,
+.reveal  section[data-background] blockquote {
   color: white;
   text-shadow:
       3px 3px 0 #000,
@@ -128,6 +129,10 @@
 
 .reveal cite {
   font-size: smaller;
+}
+
+.reveal cite.small {
+  font-size: small;
 }
 
 .reveal .background-info {

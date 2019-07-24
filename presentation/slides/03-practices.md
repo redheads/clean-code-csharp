@@ -6,12 +6,12 @@ Leave the campground cleaner than you found it!
 
 ## Praktiken des Clean Code Entwicklers
 
-- Embrace Uncertainty
-- Focus
-- Value Quality
-- Get Things Done
-- Stay Clean
-- Keep Moving
+1. Embrace Uncertainty
+1. Focus
+1. Value Quality
+1. Get Things Done
+1. Stay Clean
+1. Keep Moving
 
 ----
 

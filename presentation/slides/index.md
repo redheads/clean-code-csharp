@@ -34,7 +34,7 @@ FILE: 04-solid.md
 
 ---
 
-FILE: live-coding.md
+FILE: 05-code-smells.md
 
 ---
 

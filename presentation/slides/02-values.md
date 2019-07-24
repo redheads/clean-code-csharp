@@ -1,17 +1,17 @@
 ## Die Werte des Clean Code Entwicklers
 
-- Do Only What's Neccessary
-- Isolate Aspects
-- Minimize Dependencies
-- Honor Pledges
+1. Do Only What's Neccessary
+1. Isolate Aspects
+1. Minimize Dependencies
+1. Honor Pledges
 
 ---
 
 ### Do Only What's Neccessary
 
-- Vorsicht vor Optimierungen
-- You Ain't Gonna Need It (**YAGNI**)
-- Keep it simple, stupid (**KISS**)
+- Vorsicht vor Optimierungen:
+  - You Ain't Gonna Need It (**YAGNI**)
+  - Keep it simple, stupid (**KISS**)
 
 ---
 

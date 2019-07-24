@@ -22,13 +22,13 @@ Code Beispiele folgen...
 
 ![srp1](images/clean-code-01_srp1.png)
 
-<cite style="font-size: small">From: Agile Principles, Patterns and Practices in C#, Robert C. Martin</cite>
+<cite class="small">From: Agile Principles, Patterns and Practices in C#, Robert C. Martin</cite>
 
 ----
 
 ![srp2](images/clean-code-01_srp2.png)
 
-<cite style="font-size: small">From: Agile Principles, Patterns and Practices in C#, Robert C. Martin</cite>
+<cite class="small">From: Agile Principles, Patterns and Practices in C#, Robert C. Martin</cite>
 
 ----
 
@@ -95,6 +95,12 @@ class Rectangle {
 }
 ```
 
+----
+
+#### Live coding
+
+Wenn was unklar ist: Fragen!
+
 ---
 
 ### Open/Close Principle
@@ -107,18 +113,19 @@ class Rectangle {
 
 ![ocp1](images/clean-code-01_ocp1.png)
 
-<cite style="font-size: small">From: Agile Principles, Patterns and Practices in C#, Robert C. Martin</cite>
+<cite class="small">From: Agile Principles, Patterns and Practices in C#, Robert C. Martin</cite>
 
 ----
 
 ![ocp2](images/clean-code-01_ocp2.png)
 
-<cite style="font-size: small">From: Agile Principles, Patterns and Practices in C#, Robert C. Martin</cite>
+<cite class="small">From: Agile Principles, Patterns and Practices in C#, Robert C. Martin</cite>
 
 ----
 
 ```csharp
 class SomeService {
+    
     void DoMagic(string message) {
         _emailService.Send(message);
         _smsService.Send(message);
@@ -137,11 +144,17 @@ class SomeServiceBetter {
 
     void DoMagic(string message) {
         for (var service in _services) {
-            services.Send(message);
+            service.Send(message);
         }
     }
 }
 ```
+
+----
+
+#### Live coding
+
+Wenn was unklar ist: Fragen!
 
 ---
 
@@ -162,13 +175,19 @@ class OtherNotOk : Base {
     override int DoSomethingWithNumber(int i) 
         => i == 42
             ? i
-            : throw new Exception();
+            : throw new Exception(); // <- NOT OK!!
 }
 
 class OtherOk : Base {
     override int DoSomethingWithNumber(int i) => i * 100;
 }
 ```
+
+----
+
+#### Live coding
+
+Wenn was unklar ist: Fragen!
 
 ---
 
@@ -200,55 +219,130 @@ class Person : IPerson {
 
 - Randnotiz: <!-- .element: class="fragment" data-fragment-index="1" -->
   - this is a **Java Bean** -> pointless <!-- .element: class="fragment" data-fragment-index="1" -->
-    - (JEE violates   every aspect of OO, even more than .NET) <!-- .element: class="fragment" data-fragment-index="1" -->
+    - (JEE violates most aspects of OO, even more than .NET) <!-- .element: class="fragment" data-fragment-index="1" -->
 - violates ISP <!-- .element: class="fragment" data-fragment-index="1" -->
 
 ----
 
-Einzige Anforderung: Detailansicht der Person.
+Typische Anforderungen:
 
-Robert C. Martin
-
-Also:
-
-```csharp
-class Person : IPerson
-```
+- Listenansicht (wenig Information pro Eintrag)
+- Detailansicht (viele Informationen)
 
 ----
 
 ```csharp
-interface IPersonViewModel {
+interface IPersonDetailViewModel {
     Guid Id { get; set; }
-    string Name { get; set; }
+    string FirstName { get; set; }
+    string LastName { get; set; }
     string Address { get; set; }
 }
 
-class PersonViewModel : IPersonViewModel {
+class PersonDetailViewModel : IPersonDetailViewModel {
     Guid Id { get; set; }
-    string FirstName  { get; set; }
-    string LastName  { get; set; }
+    string FirstName { get; set; }
+    string LastName { get; set; }
     Address Address  { get; set; }
 }
+```
 
+```csharp
 interface IPersonListViewModel {
     Guid Id { get; set; }
     string Name { get; set; }
 }
 
-interface IPersonDetailViewModel {
+class PersonListViewModel : IPersonListViewModel {
     Guid Id { get; set; }
     string Name { get; set; }
-    string Address { get; set; }
 }
 ```
+
+----
 
 ```csharp
 IPersonListViewModel ConvertToListViewModel(Person person) 
     => new PersonListViewModel(person);
+
 IPersonDetailViewModel ConvertToDetailViewModel(Person person) 
     => new PersonDetailViewModel(person);
 ```
+
+```csharp
+class PersonListViewModel : IPersonListViewModel {
+    // ctor
+    PersonListViewModel(Person person) {
+        Id = person.Id;
+        Name = $"{person.LastName}, {person.FirstName}";
+    }
+    // ...
+}
+```
+
+```csharp
+class PersonDetailViewModel : IPersonDetailViewModel {
+    // ctor
+    PersonDetailViewModel(Person person) {
+        Id = person.Id;
+        FirstName = person.FirstName;
+        LastName = person.LastName;
+        Address = person.Address;
+    }
+    // ...
+}
+```
+
+----
+
+Typische Anforderung:
+
+- Schnittstelle: **GetPeople**
+- Schnittstelle: **GetPersonById**
+
+----
+
+```csharp
+class Person : IPerson  { /*...*/ }
+
+class PersonService {
+    List<IPerson> GetPeople() { /*...*/ }
+    IPerson GetPersonById(Guid id) { /*...*/ }
+}
+
+class PersonController {
+    //...
+    ActionResult PeopleList() {
+        var people = _personService.GetPeople();
+        return people; // View has unused infos in model!
+    }
+}
+```
+
+----
+
+```csharp
+class Person : IPersonListEntry, IPersonDetail  { /*...*/ }
+
+class PersonService {
+    List<IPersonListEntry> GetPeople() { /*...*/ }
+    IPersonDetail GetPersonById(Guid id) { /*...*/ }
+}
+
+class PersonController {
+    //...
+    ActionResult PeopleList() {
+        var people = _personService.GetPeople();
+        return people; // View model is optimized
+    }
+}
+```
+
+----
+
+#### Live coding
+
+Wenn was unklar ist: Fragen!
 
 ---
 
@@ -260,8 +354,20 @@ IPersonDetailViewModel ConvertToDetailViewModel(Person person)
 
 <cite>Robert C. Martin</cite>
 
- ----
+----
 
- ```csharp
-// TODO
- ```
+![dip1](images/clean-code-01_dip1.png)
+
+<cite class="small">From: Agile Principles, Patterns and Practices in C#, Robert C. Martin</cite>
+
+----
+
+![dip2](images/clean-code-01_dip2.png)
+
+<cite class="small">From: Agile Principles, Patterns and Practices in C#, Robert C. Martin</cite>
+
+----
+
+#### Live coding
+
+Wenn was unklar ist: Fragen!
