@@ -8,6 +8,8 @@
 
 ## TL/DR
 
+### Starting the presentation
+
 Linux/Mac:
 
 ```sh
@@ -18,6 +20,22 @@ Windows:
 
 ```bat
 start.bat
+```
+
+### Creating a PDF version of the presentation
+
+IMPORTANT: The script requires that the presentation is actively running in the browser (see previous section)!
+
+Linux/Mac:
+
+```sh
+./create-pdf.sh
+```
+
+Windows:
+
+```bat
+./create-pdf.bat
 ```
 
 ## Initial setup
