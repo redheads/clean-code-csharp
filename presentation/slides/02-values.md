@@ -30,9 +30,9 @@
 - Information Hiding Principle
 - **Law of Demeter**
 - **Tell, don't ask**
-- Dependency Inversion Principle (DIP)
+- Dependency Inversion Principle (**DIP**)
 - Interface Segregation Principle (**ISP**)
-- Open Closed Principle (OCP)
+- Open Closed Principle (**OCP**)
 
 ----
 
@@ -47,17 +47,37 @@ class Person {
     int Id { get; set; }
     Address Address { get; set; }
 }
+```
 
+```csharp
 class PersonService {
 
     void DoSomething() {
         var person = repo.GetById(id)
-        var street = person.Address.Street; // <- train wreck
+        var street = person.Address.Street; // <- outch: train wreck
     }
+}
+```
+
+----
+
+```csharp
+class Person {
+    int Id { get; set; }
+    Address PrimaryAddress { private get; set; }
+    Address AlternativeAddress { private get; set; }
+
+    // Business rule change
+    Street GetStreet() => PrimaryAddress?.Street ?? string.Empty;
+}
+```
+
+```csharp
+class PersonService {
 
     void DoSomethingBetter() {
         var person = repo.GetById(id)
-        var street = person.GetStreet();
+        var street = person.GetStreet(); // <- no change needed
     }
 }
 ```

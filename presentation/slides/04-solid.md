@@ -8,8 +8,6 @@
 - ISP: Interface Segregation <!-- .element: class="fragment" data-fragment-index="3" -->
 - DIP: Dependency Inversion <!-- .element: class="fragment" data-fragment-index="4" -->
 
-Code Beispiele folgen...
-
 ---
 
 ### Single Responsibility Principle
