@@ -20,6 +20,18 @@ Code Beispiele folgen...
 
 ----
 
+![srp1](images/clean-code-01_srp1.png)
+
+<cite style="font-size: small">From: Agile Principles, Patterns and Practices in C#, Robert C. Martin</cite>
+
+----
+
+![srp2](images/clean-code-01_srp2.png)
+
+<cite style="font-size: small">From: Agile Principles, Patterns and Practices in C#, Robert C. Martin</cite>
+
+----
+
 ```csharp
 class SomeService {
     void DoMagic(string message) {
