@@ -105,6 +105,18 @@ class Rectangle {
 
 ----
 
+![ocp1](images/clean-code-01_ocp1.png)
+
+<cite style="font-size: small">From: Agile Principles, Patterns and Practices in C#, Robert C. Martin</cite>
+
+----
+
+![ocp2](images/clean-code-01_ocp2.png)
+
+<cite style="font-size: small">From: Agile Principles, Patterns and Practices in C#, Robert C. Martin</cite>
+
+----
+
 ```csharp
 class SomeService {
     void DoMagic(string message) {
