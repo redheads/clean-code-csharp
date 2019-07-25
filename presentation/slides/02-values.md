@@ -30,6 +30,10 @@
 - Information Hiding Principle
 - **Law of Demeter**
 - **Tell, don't ask**
+  - JS: "Callback"
+  - Functional approach
+  - Actor-Model: Erlang, Akka/Akka.NET
+  - Rx-Patterns
 - Dependency Inversion Principle (**DIP**)
 - Interface Segregation Principle (**ISP**)
 - Open Closed Principle (**OCP**)
