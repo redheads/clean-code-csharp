@@ -249,22 +249,10 @@ interface IPersonDetailViewModel {
     string LastName { get; set; }
     string Address { get; set; }
 }
-
-class PersonDetailViewModel : IPersonDetailViewModel {
-    Guid Id { get; set; }
-    string FirstName { get; set; }
-    string LastName { get; set; }
-    Address Address  { get; set; }
-}
 ```
 
 ```csharp
 interface IPersonListViewModel {
-    Guid Id { get; set; }
-    string Name { get; set; }
-}
-
-class PersonListViewModel : IPersonListViewModel {
     Guid Id { get; set; }
     string Name { get; set; }
 }
@@ -314,7 +302,7 @@ Typische Anforderung:
 ----
 
 ```csharp
-class Person : IPerson  { /*...*/ }
+interface IPerson  { /*...*/ }
 
 class PersonService {
     List<IPerson> GetPeople() { /*...*/ }
@@ -333,7 +321,8 @@ class PersonController {
 ----
 
 ```csharp
-class Person : IPersonListEntry, IPersonDetail  { /*...*/ }
+interface IPersonListEntry { /*...*/ }
+interface IPersonDetail { /*...*/ }
 
 class PersonService {
     List<IPersonListEntry> GetPeople() { /*...*/ }
@@ -341,10 +330,15 @@ class PersonService {
 }
 
 class PersonController {
-    //...
+    
     ActionResult PeopleList() {
         var people = _personService.GetPeople();
         return people; // View model is optimized
+    }
+
+    ActionResult PeopleList() {
+        var person = _personService.GetPersonById();
+        return person; // View model is optimized
     }
 }
 ```
