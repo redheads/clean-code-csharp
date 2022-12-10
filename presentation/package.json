@@ -17,6 +17,6 @@
   "license": "MIT",
   "dependencies": {
     "font-awesome": "^4.7.0",
-    "reveal-md": "^3.0.4"
+    "reveal-md": "^5.4.0"
   }
 }
